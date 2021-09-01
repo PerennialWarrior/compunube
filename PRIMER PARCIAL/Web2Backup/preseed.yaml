@@ -1,0 +1,32 @@
+config: {}
+networks: []
+storage_pools: []
+profiles: []
+projects: []
+cluster:
+  server_name: web2backup
+  enabled: true
+  member_config:
+  - entity: storage-pool
+    name: local
+    key: source
+    value: ""
+    description: '"source" property for storage pool "local"'
+  cluster_address: 192.168.100.2:8443
+  cluster_certificate: |
+    -----BEGIN CERTIFICATE-----
+    MIICBjCCAY2gAwIBAgIRALUWwNi1iRvHmUfuEfoLRmQwCgYIKoZIzj0EAwMwNTEc
+    MBoGA1UEChMTbGludXhjb250YWluZXJzLm9yZzEVMBMGA1UEAwwMcm9vdEBoYXBy
+    b3h5MB4XDTIxMDgyNzE0MzQyM1oXDTMxMDgyNTE0MzQyM1owNTEcMBoGA1UEChMT
+    bGludXhjb250YWluZXJzLm9yZzEVMBMGA1UEAwwMcm9vdEBoYXByb3h5MHYwEAYH
+    KoZIzj0CAQYFK4EEACIDYgAE/COETmIYfvSW7S4NrZQ9nxliDxwimZvIlHtAKYCu
+    xmkKBrtE2Dlb+aslNbtBBuWHOMy/+csgm7pZ6n7zvwuEpNhhfTBHV96aMngX1reQ
+    i5u+5wswGkBgPZzFgnMc/Nu2o2EwXzAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAww
+    CgYIKwYBBQUHAwEwDAYDVR0TAQH/BAIwADAqBgNVHREEIzAhggdoYXByb3h5hwR/
+    AAABhxAAAAAAAAAAAAAAAAAAAAABMAoGCCqGSM49BAMDA2cAMGQCMB+W5ra6tv6/
+    n46envQLxqxA0xqzirnOjIftrNV5b4fMnsfcslWX5mH6LQhLfUexrwIwYbiHO2P+
+    qdhJK+DucgqUDMSiwsQaduWMxFhM5r1adocUsABFZ2Fz4rIaT/mxUvsK
+    -----END CERTIFICATE-----
+  server_address: 192.168.100.6:8443
+  cluster_password: "admin"
+  cluster_certificate_path: ""
